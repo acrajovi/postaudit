@@ -28,46 +28,44 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="campo_dbName" alignment="1" min="-2" pref="176" max="-2" attributes="0"/>
-                          <Component id="campo_puerto" min="-2" pref="176" max="-2" attributes="0"/>
-                          <Component id="campo_host" alignment="1" min="-2" pref="176" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="453" max="32767" attributes="0"/>
-          </Group>
           <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="120" max="-2" attributes="0"/>
-                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="jButton1" min="-2" pref="333" max="-2" attributes="0"/>
-                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Component id="btnInfo" min="-2" pref="62" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="campo_dbName" alignment="1" min="-2" pref="176" max="-2" attributes="0"/>
+                                  <Component id="campo_puerto" min="-2" pref="176" max="-2" attributes="0"/>
+                                  <Component id="campo_host" alignment="1" min="-2" pref="176" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <Component id="jSeparator1" max="32767" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="65" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                           <Component id="jLabel7" alignment="1" max="32767" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="109" max="-2" attributes="0"/>
+                                      <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -81,18 +79,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="btnInfo" min="-2" pref="63" max="-2" attributes="0"/>
-                          <Component id="jButton1" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jSeparator1" min="-2" pref="4" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="campo_host" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -107,13 +101,12 @@
                           <Component id="campo_dbName" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPanel1" min="-2" pref="45" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -157,7 +150,12 @@
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/acrajovisystems.jpeg"/>
+          <Image iconType="3" name="/images/logoTr.png"/>
+        </Property>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
         </Property>
       </Properties>
     </Component>
@@ -170,7 +168,7 @@
       <SubComponents>
         <Component class="javax.swing.JTextPane" name="jTextPane1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Con&#xe9;ctese a su Base de Datos para crear y/o actualizar las tablas de auditor&#xed;a de su Base de Datos Postgres.&#xa;&#xa;Requisitos:&#xa;# JRE 8.&#xa;# BASE DE DATOS POSTGRESQL&#xa;# acceder como SUPER USUARIO&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;Sistema desarrollado por acrajovisystems"/>
+            <Property name="text" type="java.lang.String" value="Con&#xe9;ctese a su Base de Datos para crear y/o actualizar las tablas de auditor&#xed;a de su Base de Datos Postgres.&#xa;&#xa;Requisitos:&#xa;# JRE 8.&#xa;# BASE DE DATOS POSTGRESQL&#xa;# acceder como SUPER USUARIO&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;Sistema desarrollado por BIO Soluciones Tecnol&#xf3;gicas"/>
             <Property name="autoscrolls" type="boolean" value="false"/>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
@@ -345,13 +343,6 @@
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="Datos de Acceso:"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="btnInfo">
-      <Properties>
-        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/images/info.png"/>
-        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JSeparator" name="jSeparator1">
