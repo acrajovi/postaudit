@@ -26,11 +26,6 @@ public class conectionclass {
     public static String userpass;
 
     public Connection dbconection() {
-//        final String auxhost = host;
-//        final String auxpuerto = puerto;
-//        final String auxdbName = dbName;
-//        final String auxusername = username;
-//        final String auxuserpass = userpass;
         try {
             final String Controlador = "org.postgresql.Driver";
             Class.forName(Controlador);
