@@ -79,7 +79,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPane1" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -139,7 +139,7 @@
     <Component class="javax.swing.JTextField" name="campo_dbName">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="soportec_org"/>
+        <Property name="text" type="java.lang.String" value="biost"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
         <Property name="name" type="java.lang.String" value="" noResource="true"/>
       </Properties>
@@ -158,6 +158,9 @@
           </Border>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>
@@ -168,8 +171,17 @@
       <SubComponents>
         <Component class="javax.swing.JTextPane" name="jTextPane1">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Con&#xe9;ctese a su Base de Datos para crear y/o actualizar las tablas de auditor&#xed;a de su Base de Datos Postgres.&#xa;&#xa;Requisitos:&#xa;# JRE 8.&#xa;# BASE DE DATOS POSTGRESQL&#xa;# acceder como SUPER USUARIO&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;Sistema desarrollado por BIO Soluciones Tecnol&#xf3;gicas"/>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="33" red="0" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="33" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Con&#xe9;ctese a su Base de Datos para crear y/o actualizar las tablas de auditor&#xed;a de su Base de Datos Postgres.&#xa;&#xa;Requisitos:&#xa;# JRE 8.&#xa;# BASE DE DATOS POSTGRESQL&#xa;# acceder como SUPER USUARIO&#xa;&#xa;# La tabla &quot;usuarios&quot; en la base de datos debe tener si o si los campos:&#xa;&#x9;&quot;ipacceso&quot; y &quot;usuario&quot;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;Sistema desarrollado por &#xa;&#x9;BIO Soluciones Tecnol&#xf3;gicas&#xa;&#x9;jacosta@bio.com.py&#xa;&#x9;+595986355113&#xa;&#x9;www.bio.com.py"/>
             <Property name="autoscrolls" type="boolean" value="false"/>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="66" green="33" red="0" type="rgb"/>
+            </Property>
             <Property name="enabled" type="boolean" value="false"/>
           </Properties>
         </Component>
@@ -319,7 +331,7 @@
         <Component class="javax.swing.JPasswordField" name="campo_pass">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="123456a*"/>
+            <Property name="text" type="java.lang.String" value="123456"/>
           </Properties>
           <Events>
             <EventHandler event="keyPressed" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="campo_passKeyPressed"/>

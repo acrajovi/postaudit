@@ -28,12 +28,14 @@ public class AuditoriaBD {
 
                 // 1) Se crea el esquema de auditoria
                 conn.createStatement().execute("CREATE SCHEMA auditoria AUTHORIZATION postgres; COMMENT ON SCHEMA auditoria IS 'Esquema para manejar relaciones y funciones relacionadas a auditoria';");
+                conn.commit();
             }
 
             // 2) Agregamos el campo usuario a las tablas que falten
             System.out.println("Agregando campos usuario...");
             System.out.println(audit.addUserField());
             conn.createStatement().execute(audit.addUserField());
+            conn.commit();
 
             // 3) Creamos las tablas de auditoria
             String tabless = audit.createAuditTables();
@@ -49,11 +51,14 @@ public class AuditoriaBD {
             System.out.println("Creando triggers...");
             System.out.println(auxStr);
 
+            conn.createStatement().execute(auxStr);
+
             conn.commit();
         } catch (SQLException sqle) {
             conn.rollback();
             throw sqle;
-        } /*finally {
+        }
+        /*finally {
             try {
                 conn.close();
             }
@@ -92,7 +97,8 @@ public class AuditoriaBD {
         } catch (SQLException sqle) {
             conn.rollback();
             throw sqle;
-        } /*finally {
+        }
+        /*finally {
             try {
                 conn.close();
             }
@@ -100,7 +106,7 @@ public class AuditoriaBD {
                 ex1.printStackTrace();
             }
         }*/
-        
+
         // Devuelve las funciones para cargarlas en un texarea y ejecutar desde ahi
         return auxStr;
     }

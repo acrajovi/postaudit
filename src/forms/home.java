@@ -43,7 +43,7 @@ public class home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         btnDeCero = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnDeTablasFaltantes = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -52,7 +52,7 @@ public class home extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         campoSQL = new javax.swing.JTextArea();
         jLabel5 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
+        btnEjecutarConsutla = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("PostAudit");
@@ -77,10 +77,10 @@ public class home extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("de Tablas Faltantes");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnDeTablasFaltantes.setText("de Tablas Faltantes");
+        btnDeTablasFaltantes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnDeTablasFaltantesActionPerformed(evt);
             }
         });
 
@@ -92,7 +92,7 @@ public class home extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnDeCero)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(btnDeTablasFaltantes)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -100,7 +100,7 @@ public class home extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(btnDeTablasFaltantes)
                     .addComponent(btnDeCero))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
@@ -145,10 +145,10 @@ public class home extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("Consulta SQL:");
 
-        jButton5.setText("Ejecutar Consulta");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnEjecutarConsutla.setText("Ejecutar Consulta");
+        btnEjecutarConsutla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnEjecutarConsutlaActionPerformed(evt);
             }
         });
 
@@ -160,7 +160,7 @@ public class home extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton5)
+                        .addComponent(btnEjecutarConsutla)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1)
                         .addGap(24, 24, 24))
@@ -206,7 +206,7 @@ public class home extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
-                    .addComponent(jButton5))
+                    .addComponent(btnEjecutarConsutla))
                 .addGap(25, 25, 25))
         );
 
@@ -223,6 +223,7 @@ public class home extends javax.swing.JFrame {
         try {
             AuditoriaBD utilAuditoria = new AuditoriaBD(conn);
             campoSQL.setText(utilAuditoria.make());
+            btnEjecutarConsutla.setEnabled(false);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             return;
@@ -234,7 +235,7 @@ public class home extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Esquema de auditoría, tablas y funciones generadas correctamente..", "MENSAJE", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnDeCeroActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnDeTablasFaltantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeTablasFaltantesActionPerformed
         try {
             AuditoriaBD utilAuditoria = new AuditoriaBD(conn);
             campoSQL.setText(utilAuditoria.make(true));
@@ -246,7 +247,7 @@ public class home extends javax.swing.JFrame {
             return;
         }
         JOptionPane.showMessageDialog(null, "Tablas de auditoría Generadas Correctamente..", "MENSAJE", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_btnDeTablasFaltantesActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         try {
@@ -262,12 +263,12 @@ public class home extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Tablas de auditoría Actualizadas Correctamente..", "MENSAJE", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        if (!this.campoSQL.getText().toString().contains("usuariosys")
-                || !this.campoSQL.getText().toString().contains(";")
-                || !this.campoSQL.getText().toString().contains("CREATE")
-                || !this.campoSQL.getText().toString().contains("OR")
-                || !this.campoSQL.getText().toString().contains("REPLACE")
+    private void btnEjecutarConsutlaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEjecutarConsutlaActionPerformed
+        if (!this.campoSQL.getText().contains("usuariosys")
+                || !this.campoSQL.getText().contains(";")
+                || !this.campoSQL.getText().contains("CREATE")
+                || !this.campoSQL.getText().contains("OR")
+                || !this.campoSQL.getText().contains("REPLACE")
                 || Utilities.isEmpty(this.campoSQL.getText())) {
             JOptionPane.showMessageDialog(null, "No existe comando SQL válido.", "ERROR", JOptionPane.ERROR_MESSAGE);
             return;
@@ -276,17 +277,18 @@ public class home extends javax.swing.JFrame {
 
         try {
             conn.createStatement().execute(this.campoSQL.getText());
+            conn.commit();
         } catch (Exception e) {
             e.printStackTrace();
             return;
         }
-        try {
-            conn.close();
-        } catch (SQLException ex) {
-            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//        try {
+////            conn.close();
+//        } catch (SQLException ex) {
+//            Logger.getLogger(home.class.getName()).log(Level.SEVERE, null, ex);
+//        }
         JOptionPane.showMessageDialog(null, "Funciones de Auditoría Generadas correctamente..", "MENSAJE", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnEjecutarConsutlaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -325,11 +327,11 @@ public class home extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDeCero;
+    private javax.swing.JButton btnDeTablasFaltantes;
+    private javax.swing.JButton btnEjecutarConsutla;
     private javax.swing.JTextArea campoSQL;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -63,15 +63,15 @@ public final class Sql {
                 "from 	information_schema.columns isc " +
                 "join	pg_tables pgt on (isc.table_name = pgt.tablename) " +
                 "where	pgt.schemaname = 'public' " +
-//                "and	isc.table_schema not like 'auditoria%' " +
-//                "and	isc.table_name not in ( " +
-//                "	select	tablename " +
-//                "	from	pg_tables " +
-//                "	where	schemaname = 'auditoria' " +
+                "and	isc.table_schema not like 'auditoria%' " +
+                "and	isc.table_name not in ( " +
+                "	select	tablename " +
+                "	from	pg_tables " +
+                "	where	schemaname = 'auditoria' " +
 //                "   union  " +
 //                "   select  table_name " +
 //                "   from    matviews.tablas_no_auditar " +
-//                ") " +
+                ") " +
                 "and    isc.data_type != 'ARRAY' " +
                 "order by isc.table_name, isc.ordinal_position";
 

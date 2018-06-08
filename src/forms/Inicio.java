@@ -5,6 +5,10 @@
  */
 package forms;
 
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -78,7 +82,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3.setText("Nombre de la Base de Datos:");
 
         campo_dbName.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campo_dbName.setText("soportec_org");
+        campo_dbName.setText("biost");
         campo_dbName.setToolTipText("");
         campo_dbName.setName(""); // NOI18N
         campo_dbName.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -89,9 +93,17 @@ public class Inicio extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logoTr.png"))); // NOI18N
         jButton1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
-        jTextPane1.setText("Conéctese a su Base de Datos para crear y/o actualizar las tablas de auditoría de su Base de Datos Postgres.\n\nRequisitos:\n# JRE 8.\n# BASE DE DATOS POSTGRESQL\n# acceder como SUPER USUARIO\n\n\n\n\n\n\n\n\n\n\nSistema desarrollado por BIO Soluciones Tecnológicas");
+        jTextPane1.setBackground(new java.awt.Color(0, 51, 102));
+        jTextPane1.setForeground(new java.awt.Color(0, 51, 102));
+        jTextPane1.setText("Conéctese a su Base de Datos para crear y/o actualizar las tablas de auditoría de su Base de Datos Postgres.\n\nRequisitos:\n# JRE 8.\n# BASE DE DATOS POSTGRESQL\n# acceder como SUPER USUARIO\n\n# La tabla \"usuarios\" en la base de datos debe tener si o si los campos:\n\t\"ipacceso\" y \"usuario\"\n\n\n\n\n\n\n\n\nSistema desarrollado por \n\tBIO Soluciones Tecnológicas\n\tjacosta@bio.com.py\n\t+595986355113\n\twww.bio.com.py");
         jTextPane1.setAutoscrolls(false);
+        jTextPane1.setCaretColor(new java.awt.Color(0, 51, 102));
         jTextPane1.setEnabled(false);
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -168,7 +180,7 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         campo_pass.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        campo_pass.setText("123456a*");
+        campo_pass.setText("123456");
         campo_pass.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 campo_passKeyPressed(evt);
@@ -253,7 +265,7 @@ public class Inicio extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -385,6 +397,16 @@ public class Inicio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Conexion fail\nError:" + ex, "ERROR", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btnConectarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        try {
+            Desktop.getDesktop().browse(new URI("http://www.bio.com.py"));
+        } catch (URISyntaxException ex) {
+            System.out.println(ex);
+        } catch (IOException ex) {
+            Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
